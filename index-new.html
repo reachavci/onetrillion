@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE TRILLION - Premium Trucker Caps</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* PREMIUM SPACE BACKGROUND */
+        .space-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(30, 30, 50, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(20, 30, 60, 0.3) 0%, transparent 50%),
+                #000000;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: starTwinkle 4s ease-in-out infinite;
+        }
+
+        .star.small {
+            width: 1px;
+            height: 1px;
+        }
+
+        .star.medium {
+            width: 2px;
+            height: 2px;
+        }
+
+        .star.large {
+            width: 3px;
+            height: 3px;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes starTwinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* PREMIUM HEADER */
+        .header {
+            position: relative;
+            z-index: 100;
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4em;
+            font-weight: 900;
+            letter-spacing: 20px;
+            background: linear-gradient(180deg, #ffffff 0%, #d0d0d0 50%, #a0a0a0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.3));
+            position: relative;
+        }
+
+        .logo::after {
+            content: 'PREMIUM COLLECTION';
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.2em;
+            letter-spacing: 8px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* REFINED TOP TICKER */
+        .top-ticker {
+            position: relative;
+            z-index: 100;
+            background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.03) 50%, 
+                rgba(255, 255, 255, 0) 100%);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 18px 0;
+            overflow: hidden;
+            margin: 40px 0;
+        }
+
+        .ticker-content {
+            display: flex;
+            animation: tickerScroll 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker-item {
+            font-size: 0.85em;
+            letter-spacing: 4px;
+            padding: 0 80px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        @keyframes tickerScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* MAIN CONTAINER */
+        .main-container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 450px);
+            padding: 80px 20px;
+        }
+
+        /* PREMIUM ORBITAL SYSTEM */
+        .orbital-system {
+            position: relative;
+            width: 700px;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1500px;
+        }
+
+        /* ENHANCED BINARY RING */
+        .binary-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            animation: rotateRing 20s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes rotateRing {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .binary-digit {
+            position: absolute;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            color: #ffffff;
+            transform-style: preserve-3d;
+            transition: all 0.3s ease;
+        }
+
+        .binary-digit.one {
+            font-size: 72px;
+            opacity: 1;
+            text-shadow: 
+                0 0 30px rgba(255, 255, 255, 1),
+                0 0 60px rgba(255, 255, 255, 0.8),
+                0 0 90px rgba(255, 255, 255, 0.6),
+                0 10px 40px rgba(0, 0, 0, 0.8);
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+            animation: onePulse 2s ease-in-out infinite;
+        }
+
+        .binary-digit.zero {
+            font-size: 36px;
+            opacity: 0.25;
+            color: rgba(255, 255, 255, 0.4);
+            text-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.3),
+                0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes onePulse {
+            0%, 100% { 
+                transform: translateZ(80px) scale(1); 
+                text-shadow: 
+                    0 0 30px rgba(255, 255, 255, 1),
+                    0 0 60px rgba(255, 255, 255, 0.8),
+                    0 0 90px rgba(255, 255, 255, 0.6);
+            }
+            50% { 
+                transform: translateZ(80px) scale(1.1); 
+                text-shadow: 
+                    0 0 40px rgba(255, 255, 255, 1),
+                    0 0 80px rgba(255, 255, 255, 0.9),
+                    0 0 120px rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        /* LUXURY CAP PLANET */
+        .cap-planet {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, 
+                rgba(255, 255, 255, 0.08) 0%, 
+                rgba(255, 255, 255, 0.02) 40%,
+                transparent 70%);
+            border-radius: 50%;
+            box-shadow: 
+                0 0 100px rgba(255, 255, 255, 0.15),
+                inset 0 0 60px rgba(255, 255, 255, 0.05);
+            animation: planetFloat 8s ease-in-out infinite;
+        }
+
+        @keyframes planetFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.02); }
+        }
+
+        .cap-display {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cap-image {
+            width: 100%;
+            height: auto;
+            filter: 
+                drop-shadow(0 20px 60px rgba(0, 0, 0, 0.9))
+                drop-shadow(0 0 40px rgba(255, 255, 255, 0.1));
+            animation: capRotate 25s linear infinite;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .cap-image:hover {
+            transform: scale(1.15);
+            filter: 
+                drop-shadow(0 25px 80px rgba(0, 0, 0, 0.9))
+                drop-shadow(0 0 60px rgba(255, 255, 255, 0.3));
+        }
+
+        @keyframes capRotate {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        /* REFINED CUSTOMIZATION */
+        .controls-container {
+            position: relative;
+            z-index: 20;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .control-section {
+            margin-bottom: 40px;
+        }
+
+        .control-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75em;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .control-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .control-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .control-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s ease;
+        }
+
+        .control-btn:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .control-btn:hover {
+            border-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 
+                0 0 40px rgba(255, 255, 255, 0.3),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
+            transform: scale(1.15) translateY(-5px);
+        }
+
+        .control-btn.active {
+            border-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 
+                0 0 50px rgba(255, 255, 255, 0.5),
+                inset 0 0 30px rgba(255, 255, 255, 0.2);
+            border-width: 2px;
+            transform: scale(1.1);
+        }
+
+        /* PREMIUM ORDER BUTTON */
+        .order-button {
+            margin-top: 60px;
+            padding: 24px 80px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 4px;
+            color: #000000;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 
+                0 10px 40px rgba(255, 255, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .order-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .order-button:hover::before {
+            left: 100%;
+        }
+
+        .order-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 
+                0 20px 60px rgba(255, 255, 255, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+        }
+
+        .order-button:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        /* REFINED BOTTOM TICKER */
+        .bottom-ticker {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.03) 50%, 
+                rgba(255, 255, 255, 0) 100%);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px 0;
+            overflow: hidden;
+            height: 120px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bottom-ticker-content {
+            display: flex;
+            gap: 50px;
+            animation: tickerScroll 45s linear infinite;
+        }
+
+        .ticker-cap {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            flex-shrink: 0;
+            filter: 
+                drop-shadow(0 5px 20px rgba(255, 255, 255, 0.1))
+                grayscale(0.3);
+            opacity: 0.5;
+            transition: all 0.4s ease;
+        }
+
+        .ticker-cap:hover {
+            opacity: 1;
+            transform: scale(1.3) translateY(-10px);
+            filter: 
+                drop-shadow(0 10px 40px rgba(255, 255, 255, 0.4))
+                grayscale(0);
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5em;
+                letter-spacing: 10px;
+            }
+
+            .logo::after {
+                font-size: 0.18em;
+                letter-spacing: 4px;
+            }
+
+            .orbital-system {
+                width: 450px;
+                height: 450px;
+            }
+
+            .cap-planet {
+                width: 300px;
+                height: 300px;
+            }
+
+            .cap-display {
+                width: 240px;
+                height: 240px;
+            }
+
+            .binary-digit.one {
+                font-size: 48px;
+            }
+
+            .binary-digit.zero {
+                font-size: 28px;
+            }
+
+            .control-btn {
+                width: 65px;
+                height: 65px;
+            }
+
+            .order-button {
+                padding: 18px 50px;
+                font-size: 0.9em;
+            }
+
+            .ticker-cap {
+                width: 70px;
+                height: 70px;
+            }
+
+            .bottom-ticker {
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .orbital-system {
+                width: 350px;
+                height: 350px;
+            }
+
+            .cap-planet {
+                width: 240px;
+                height: 240px;
+            }
+
+            .cap-display {
+                width: 190px;
+                height: 190px;
+            }
+
+            .binary-digit.one {
+                font-size: 38px;
+            }
+
+            .binary-digit.zero {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SPACE BACKGROUND -->
+    <div class="space-background" id="spaceBackground"></div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">ONE TRILLION</div>
+    </div>
+
+    <!-- TOP TICKER -->
+    <div class="top-ticker">
+        <div class="ticker-content">
+            <span class="ticker-item">PREMIUM TRUCKER CAPS</span>
+            <span class="ticker-item">FREE WORLDWIDE SHIPPING</span>
+            <span class="ticker-item">CUSTOMIZABLE DESIGNS</span>
+            <span class="ticker-item">PREMIUM TRUCKER CAPS</span>
+            <span class="ticker-item">FREE WORLDWIDE SHIPPING</span>
+            <span class="ticker-item">CUSTOMIZABLE DESIGNS</span>
+        </div>
+    </div>
+
+    <!-- MAIN ORBITAL SYSTEM -->
+    <div class="main-container">
+        <div>
+            <div class="orbital-system">
+                <!-- BINARY RING -->
+                <div class="binary-ring" id="binaryRing"></div>
+
+                <!-- CAP PLANET CENTER -->
+                <div class="cap-planet">
+                    <div class="cap-display">
+                        <img id="capImage" class="cap-image" src="images/black-base.png" alt="Trucker Cap">
+                    </div>
+                </div>
+            </div>
+
+            <!-- CUSTOMIZATION CONTROLS -->
+            <div class="controls-container">
+                <div class="control-section">
+                    <div class="control-label">Base Color</div>
+                    <div class="control-buttons">
+                        <button class="control-btn active" style="background: #000;" data-base="black" onclick="updateBase('black')"></button>
+                        <button class="control-btn" style="background: #197ab7;" data-base="blue" onclick="updateBase('blue')"></button>
+                        <button class="control-btn" style="background: #A9A9A9;" data-base="grey" onclick="updateBase('grey')"></button>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <div class="control-label">Text Color</div>
+                    <div class="control-buttons">
+                        <button class="control-btn" style="background: #e05733;" data-text="orange" onclick="updateText('orange')"></button>
+                        <button class="control-btn" style="background: #28795b;" data-text="green" onclick="updateText('green')"></button>
+                        <button class="control-btn" style="background: #75417e;" data-text="pink" onclick="updateText('pink')"></button>
+                    </div>
+                </div>
+
+                <button class="order-button">ORDER NOW - €29.99</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM TICKER WITH CAPS -->
+    <div class="bottom-ticker">
+        <div class="bottom-ticker-content" id="bottomTicker"></div>
+    </div>
+
+    <script>
+        // ===== PREMIUM SPACE BACKGROUND STARS =====
+        function createStars() {
+            const spaceBackground = document.getElementById('spaceBackground');
+            const starCount = 200;
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                
+                // Vary star sizes
+                const size = Math.random();
+                if (size > 0.95) {
+                    star.className = 'star large';
+                } else if (size > 0.85) {
+                    star.className = 'star medium';
+                } else {
+                    star.className = 'star small';
+                }
+                
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 4 + 's';
+                star.style.animationDuration = (3 + Math.random() * 3) + 's';
+                
+                spaceBackground.appendChild(star);
+            }
+        }
+
+        // ===== BINARY RING (1 single "1" and 19 "0"s) =====
+        function createBinaryRing() {
+            const ring = document.getElementById('binaryRing');
+            const totalDigits = 20;
+            const radius = 280;
+
+            for (let i = 0; i < totalDigits; i++) {
+                const digit = document.createElement('div');
+                const angle = (i / totalDigits) * 360;
+                const radian = (angle * Math.PI) / 180;
+
+                // Only the first digit is "1", rest are "0"
+                const isOne = i === 0;
+                digit.textContent = isOne ? '1' : '0';
+                digit.className = isOne ? 'binary-digit one' : 'binary-digit zero';
+
+                // Position on circle
+                const x = Math.cos(radian) * radius;
+                const y = Math.sin(radian) * radius;
+
+                // 3D positioning - 1 closer, 0s farther
+                const zDepth = isOne ? 50 : -20;
+
+                digit.style.left = `calc(50% + ${x}px)`;
+                digit.style.top = `calc(50% + ${y}px)`;
+                digit.style.transform = `translate(-50%, -50%) translateZ(${zDepth}px)`;
+                digit.style.animationDelay = (i * 0.1) + 's';
+
+                ring.appendChild(digit);
+            }
+        }
+
+        // ===== CAP CUSTOMIZATION =====
+        let currentBase = 'black';
+        let currentText = null;
+
+        const baseImages = {
+            'black': 'images/black-base.png',
+            'blue': 'images/blue-base.png',
+            'grey': 'images/grey-base.png'
+        };
+
+        const textImages = {
+            'black-orange': 'images/black-orange.png',
+            'black-green': 'images/black-green.png',
+            'black-pink': 'images/black-pink.png',
+            'blue-orange': 'images/blue-orange.png',
+            'blue-green': 'images/blue-green.png',
+            'blue-pink': 'images/blue-pink.png',
+            'grey-orange': 'images/grey-orange.png',
+            'grey-green': 'images/grey-green.png',
+            'grey-pink': 'images/grey-pink.png'
+        };
+
+        function updateBase(base) {
+            currentBase = base;
+            updateCapImage();
+
+            // Update active button
+            document.querySelectorAll('[data-base]').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-base="${base}"]`).classList.add('active');
+        }
+
+        function updateText(text) {
+            currentText = text;
+            updateCapImage();
+
+            // Update active button
+            document.querySelectorAll('[data-text]').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-text="${text}"]`).classList.add('active');
+        }
+
+        function updateCapImage() {
+            const capImg = document.getElementById('capImage');
+
+            if (currentText) {
+                const key = `${currentBase}-${currentText}`;
+                capImg.src = textImages[key];
+            } else {
+                capImg.src = baseImages[currentBase];
+            }
+        }
+
+        // ===== BOTTOM TICKER CAPS =====
+        function createBottomTicker() {
+            const capVariations = [
+                'images/showcase-cap-blue.png',
+                'images/showcase-cap-grey.png',
+                'images/showcase-cap-black.png',
+                'images/showcase-cap-black-pink.png',
+                'images/showcase-cap-grey-green.png',
+                'images/showcase-cap-blue-green.png',
+                'images/showcase-cap-black-orange.png'
+            ];
+
+            const ticker = document.getElementById('bottomTicker');
+            const totalCaps = 30;
+
+            // Create caps twice for seamless loop
+            for (let set = 0; set < 2; set++) {
+                for (let i = 0; i < totalCaps; i++) {
+                    const randomCap = capVariations[Math.floor(Math.random() * capVariations.length)];
+                    const cap = document.createElement('img');
+                    cap.src = randomCap;
+                    cap.className = 'ticker-cap';
+                    ticker.appendChild(cap);
+                }
+            }
+        }
+
+        // ===== INITIALIZE =====
+        window.addEventListener('DOMContentLoaded', function() {
+            createStars();
+            createBinaryRing();
+            createBottomTicker();
+        });
+    </script>
+</body>
+</html>
